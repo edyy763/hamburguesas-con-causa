@@ -11,97 +11,139 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
 
 <div class="container">
 
     <img src="images/hamburguesa.jpg" class="banner">
 
+
     <h1>🍔 Hamburguesas con Causa</h1>
 
-    <h2 id="producto">
-        Combo Hamburguesa + Refresco
+
+    <h2>
+        Selecciona tus productos
     </h2>
-    
-    <div class="precio" id="precio">
-        $100 MXN
+
+
+    <!-- Combo $100 -->
+
+    <div class="producto">
+
+        <h3>
+            🍔 Combo Hamburguesa + Refresco
+        </h3>
+
+        <div class="precio">
+            $100 MXN
+        </div>
+
+
+        <div class="cantidad">
+
+            <button id="menos100">
+                −
+            </button>
+
+            <span id="cantidad100">
+                0
+            </span>
+
+            <button id="mas100">
+                +
+            </button>
+
+        </div>
+
     </div>
-    
-    
-    <div class="opciones">
-    
-        <label>
-            <input 
-                type="radio" 
-                name="producto" 
-                value="100"
-                data-nombre="Combo Hamburguesa + Refresco"
-                checked
-                onchange="cambiarProducto(this)">
-            
-            Combo Hamburguesa + Refresco ($100)
-        </label>
-    
-    
-        <label>
-            <input 
-                type="radio" 
-                name="producto" 
-                value="85"
-                data-nombre="Hamburguesa sin soda"
-                onchange="cambiarProducto(this)">
-            
-            Hamburguesa sin soda ($85)
-        </label>
-    
+
+
+
+    <!-- Hamburguesa $85 -->
+
+    <div class="producto">
+
+        <h3>
+            🍔 Hamburguesa sin soda
+        </h3>
+
+        <div class="precio">
+            $85 MXN
+        </div>
+
+
+        <div class="cantidad">
+
+            <button id="menos85">
+                −
+            </button>
+
+            <span id="cantidad85">
+                0
+            </span>
+
+            <button id="mas85">
+                +
+            </button>
+
+        </div>
+
     </div>
+
+
 
     <div class="form">
 
-        <label>Nombre</label>
+
+        <label>
+            Nombre
+        </label>
+
 
         <input
             type="text"
             id="nombre"
             placeholder="Escribe tu nombre">
 
-        <label>Cantidad de Combos</label>
 
-        <div class="cantidad">
-
-            <button id="menos">−</button>
-
-            <span id="cantidad">1</span>
-
-            <button id="mas">+</button>
-
-        </div>
 
         <div class="total">
 
             Total
 
             <span id="total">
-                $100
+                $0
             </span>
 
         </div>
 
-        <label>Comentarios</label>
+
+
+        <label>
+            Comentarios
+        </label>
+
 
         <textarea
-        id="comentarios"
-        placeholder="Ej. Sin cebolla..."></textarea>
+            id="comentarios"
+            placeholder="Ej. Sin cebolla...">
+        </textarea>
+
+
 
         <button
-        class="whatsapp"
-        onclick="enviarWhatsapp()">
+            class="whatsapp"
+            onclick="enviarWhatsapp()">
 
             🟢 Pedir por WhatsApp
 
         </button>
 
+
     </div>
+
+
 
     <footer>
 
@@ -109,9 +151,13 @@
 
     </footer>
 
+
 </div>
 
+
+
 <script src="script.js"></script>
+
 
 </body>
 </html>
