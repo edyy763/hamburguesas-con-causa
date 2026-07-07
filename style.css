@@ -1,0 +1,226 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    background:#D62828;
+    font-family:Poppins,sans-serif;
+    display:flex;
+    justify-content:center;
+    padding:30px;
+
+}
+
+.container{
+
+    width:100%;
+    max-width:450px;
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.banner{
+
+    width:100%;
+
+}
+
+h1{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    color:#D62828;
+
+}
+
+h2{
+
+    text-align:center;
+
+    color:#555;
+
+    font-size:18px;
+
+}
+
+.precio{
+
+    background:#FFD60A;
+
+    width:180px;
+
+    margin:20px auto;
+
+    text-align:center;
+
+    padding:10px;
+
+    border-radius:50px;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+.form{
+
+    padding:25px;
+
+}
+
+label{
+
+    display:block;
+
+    margin-top:20px;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+input,textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    border:1px solid #CCC;
+
+    font-size:16px;
+
+}
+
+textarea{
+
+    resize:none;
+
+    height:90px;
+
+}
+
+.cantidad{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.cantidad button{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#FFD60A;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.cantidad button:hover{
+
+    transform:scale(1.1);
+
+}
+
+#cantidad{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+.total{
+
+    margin-top:20px;
+
+    font-size:24px;
+
+    text-align:center;
+
+    font-weight:bold;
+
+}
+
+#total{
+
+    display:block;
+
+    color:#D62828;
+
+    font-size:36px;
+
+}
+
+.whatsapp{
+
+    margin-top:30px;
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    background:#25D366;
+
+    color:white;
+
+    font-size:20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.whatsapp:hover{
+
+    transform:scale(1.03);
+
+}
+
+footer{
+
+    text-align:center;
+
+    padding:20px;
+
+    color:#666;
+
+}
