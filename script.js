@@ -1,10 +1,15 @@
-const precio = 100;
+let precio = 100;
+
+let productoSeleccionado = "Combo Hamburguesa + Refresco";
 
 let cantidad = 1;
+
 
 const cantidadSpan = document.getElementById("cantidad");
 
 const totalSpan = document.getElementById("total");
+
+
 
 document.getElementById("mas").onclick = () => {
 
@@ -14,9 +19,11 @@ document.getElementById("mas").onclick = () => {
 
 }
 
+
+
 document.getElementById("menos").onclick = () => {
 
-    if(cantidad>1){
+    if(cantidad > 1){
 
         cantidad--;
 
@@ -26,19 +33,42 @@ document.getElementById("menos").onclick = () => {
 
 }
 
+
+
+function cambiarProducto(opcion){
+
+    precio = Number(opcion.value);
+
+    productoSeleccionado = opcion.dataset.nombre;
+
+    document.getElementById("producto").innerHTML = productoSeleccionado;
+
+    document.getElementById("precio").innerHTML = "$" + precio + " MXN";
+
+
+    actualizar();
+
+}
+
+
+
 function actualizar(){
 
     cantidadSpan.innerHTML = cantidad;
 
-    totalSpan.innerHTML="$"+(cantidad*precio);
+    totalSpan.innerHTML = "$" + (cantidad * precio);
 
 }
 
+
+
 function enviarWhatsapp(){
 
-    let nombre=document.getElementById("nombre").value;
 
-    let comentarios=document.getElementById("comentarios").value;
+    let nombre = document.getElementById("nombre").value;
+
+    let comentarios = document.getElementById("comentarios").value;
+
 
     if(nombre==""){
 
@@ -48,21 +78,24 @@ function enviarWhatsapp(){
 
     }
 
-    let total=cantidad*precio;
 
-    let telefono="526562757854"; // Cambia por tu número
+    let total = cantidad * precio;
 
-    let mensaje=
+
+    let telefono = "526562757854";
+
+
+    let mensaje =
 `🍔 *NUEVO PEDIDO*%0A%0A
 👤 *Nombre:* ${nombre}%0A
-🍔 *Combos:* ${cantidad}%0A
+🍔 *Producto:* ${productoSeleccionado}%0A
+🔢 *Cantidad:* ${cantidad}%0A
 💲 *Total:* $${total}%0A%0A
 📝 *Comentarios:*%0A${comentarios}`;
 
+
     window.open(
-
-`https://wa.me/${telefono}?text=${mensaje}`
-
-);
+        `https://wa.me/${telefono}?text=${mensaje}`
+    );
 
 }
