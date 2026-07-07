@@ -224,3 +224,28 @@ footer{
     color:#666;
 
 }
+
+.opciones{
+
+    padding:10px 25px;
+
+}
+
+
+.opciones label{
+
+    margin-top:12px;
+
+    font-weight:500;
+
+}
+
+
+.opciones input{
+
+    width:auto;
+
+    margin-right:8px;
+
+}
+
