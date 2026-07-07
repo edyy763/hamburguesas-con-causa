@@ -19,10 +19,41 @@
 
     <h1>🍔 Hamburguesas con Causa</h1>
 
-    <h2>Combo Hamburguesa + Refresco</h2>
-
-    <div class="precio">
+    <h2 id="producto">
+        Combo Hamburguesa + Refresco
+    </h2>
+    
+    <div class="precio" id="precio">
         $100 MXN
+    </div>
+    
+    
+    <div class="opciones">
+    
+        <label>
+            <input 
+                type="radio" 
+                name="producto" 
+                value="100"
+                data-nombre="Combo Hamburguesa + Refresco"
+                checked
+                onchange="cambiarProducto(this)">
+            
+            Combo Hamburguesa + Refresco ($100)
+        </label>
+    
+    
+        <label>
+            <input 
+                type="radio" 
+                name="producto" 
+                value="85"
+                data-nombre="Hamburguesa sin soda"
+                onchange="cambiarProducto(this)">
+            
+            Hamburguesa sin soda ($85)
+        </label>
+    
     </div>
 
     <div class="form">
