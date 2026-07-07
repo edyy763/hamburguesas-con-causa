@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburguesas con Causa</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+
+    <img src="images/hamburguesa.jpg" class="banner">
+
+    <h1>🍔 Hamburguesas con Causa</h1>
+
+    <h2>Combo Hamburguesa + Refresco</h2>
+
+    <div class="precio">
+        $100 MXN
+    </div>
+
+    <div class="form">
+
+        <label>Nombre</label>
+
+        <input
+            type="text"
+            id="nombre"
+            placeholder="Escribe tu nombre">
+
+        <label>Cantidad de Combos</label>
+
+        <div class="cantidad">
+
+            <button id="menos">−</button>
+
+            <span id="cantidad">1</span>
+
+            <button id="mas">+</button>
+
+        </div>
+
+        <div class="total">
+
+            Total
+
+            <span id="total">
+                $100
+            </span>
+
+        </div>
+
+        <label>Comentarios</label>
+
+        <textarea
+        id="comentarios"
+        placeholder="Ej. Sin cebolla..."></textarea>
+
+        <button
+        class="whatsapp"
+        onclick="enviarWhatsapp()">
+
+            🟢 Pedir por WhatsApp
+
+        </button>
+
+    </div>
+
+    <footer>
+
+        ❤️ Gracias por apoyar esta venta con causa ❤️
+
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
