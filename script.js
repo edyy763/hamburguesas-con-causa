@@ -113,7 +113,7 @@ function enviarWhatsapp(){
 
 
 
-    let telefono = "526562757854"; // Cambia por tu número
+    let telefono = "526566458304"; // Cambia por tu número
 
 
 
