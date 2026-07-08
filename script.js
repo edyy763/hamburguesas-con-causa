@@ -1,12 +1,9 @@
 let cantidad100 = 0;
 let cantidad85 = 0;
 
-
 const cantidad100Span = document.getElementById("cantidad100");
 const cantidad85Span = document.getElementById("cantidad85");
 const totalSpan = document.getElementById("total");
-
-
 
 // ===== COMBO HAMBURGUESA + REFRESCO $100 =====
 
@@ -18,10 +15,9 @@ document.getElementById("mas100").onclick = () => {
 
 }
 
-
 document.getElementById("menos100").onclick = () => {
 
-    if(cantidad100 > 0){
+    if (cantidad100 > 0) {
 
         cantidad100--;
 
@@ -30,7 +26,6 @@ document.getElementById("menos100").onclick = () => {
     }
 
 }
-
 
 
 // ===== HAMBURGUESA SIN SODA $85 =====
@@ -43,10 +38,9 @@ document.getElementById("mas85").onclick = () => {
 
 }
 
-
 document.getElementById("menos85").onclick = () => {
 
-    if(cantidad85 > 0){
+    if (cantidad85 > 0) {
 
         cantidad85--;
 
@@ -57,38 +51,35 @@ document.getElementById("menos85").onclick = () => {
 }
 
 
+// ===== ACTUALIZAR =====
 
-// Actualizar cantidades y total
-
-function actualizar(){
+function actualizar() {
 
     cantidad100Span.innerHTML = cantidad100;
 
     cantidad85Span.innerHTML = cantidad85;
 
-
-    let total = 
-        (cantidad100 * 100) + 
+    let total =
+        (cantidad100 * 100) +
         (cantidad85 * 85);
-
 
     totalSpan.innerHTML = "$" + total;
 
 }
 
 
+// ===== ENVIAR PEDIDO =====
 
-// Enviar pedido por WhatsApp
+function enviarWhatsapp() {
 
-function enviarWhatsapp(){
+    let nombre = document.getElementById("nombre").value.trim();
+
+    let horario = document.getElementById("horario").value;
+
+    let comentarios = document.getElementById("comentarios").value.trim();
 
 
-    let nombre = document.getElementById("nombre").value;
-
-    let comentarios = document.getElementById("comentarios").value;
-
-
-    if(nombre.trim() == ""){
+    if (nombre === "") {
 
         alert("Escribe tu nombre.");
 
@@ -97,13 +88,21 @@ function enviarWhatsapp(){
     }
 
 
-    let total = 
-        (cantidad100 * 100) + 
+    if (horario === "") {
+
+        alert("Selecciona un horario para recoger.");
+
+        return;
+
+    }
+
+
+    let total =
+        (cantidad100 * 100) +
         (cantidad85 * 85);
 
 
-
-    if(total == 0){
+    if (total === 0) {
 
         alert("Selecciona al menos un producto.");
 
@@ -112,9 +111,18 @@ function enviarWhatsapp(){
     }
 
 
+    let telefono = "526566458304"; // Tu número de WhatsApp
 
-    let telefono = "526566458304"; // Cambia por tu número
 
+    let productos = "";
+
+    if (cantidad100 > 0) {
+        productos += `🍔 Combo Hamburguesa + Refresco x${cantidad100}\n`;
+    }
+
+    if (cantidad85 > 0) {
+        productos += `🍔 Hamburguesa sin soda x${cantidad85}\n`;
+    }
 
 
     let mensaje =
@@ -122,21 +130,18 @@ function enviarWhatsapp(){
 
 👤 *Nombre:* ${nombre}
 
-🍔 *Combo Hamburguesa + Refresco:* ${cantidad100}
-
-🍔 *Hamburguesa sin soda:* ${cantidad85}
+🛒 *Pedido:*
+${productos}
+🕐 *Horario para recoger:* ${horario}
 
 💲 *Total:* $${total}
 
 📝 *Comentarios:*
-${comentarios}`;
-
+${comentarios || "Sin comentarios."}`;
 
 
     window.open(
-
         `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`
-
     );
 
 }
