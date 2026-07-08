@@ -6,19 +6,27 @@
 
 }
 
+
 body{
 
     background:#D62828;
+
     font-family:Poppins,sans-serif;
+
     display:flex;
+
     justify-content:center;
+
     padding:30px;
 
 }
 
+
+
 .container{
 
     width:100%;
+
     max-width:450px;
 
     background:white;
@@ -31,11 +39,17 @@ body{
 
 }
 
+
+
 .banner{
 
     width:100%;
 
+    display:block;
+
 }
+
+
 
 h1{
 
@@ -47,6 +61,8 @@ h1{
 
 }
 
+
+
 h2{
 
     text-align:center;
@@ -55,7 +71,37 @@ h2{
 
     font-size:18px;
 
+    margin:15px;
+
 }
+
+
+
+/* Productos */
+
+.producto{
+
+    padding:15px 25px;
+
+    text-align:center;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+
+.producto h3{
+
+    color:#555;
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+}
+
+
 
 .precio{
 
@@ -63,7 +109,7 @@ h2{
 
     width:180px;
 
-    margin:20px auto;
+    margin:15px auto;
 
     text-align:center;
 
@@ -71,51 +117,15 @@ h2{
 
     border-radius:50px;
 
-    font-size:28px;
+    font-size:24px;
 
     font-weight:bold;
 
 }
 
-.form{
 
-    padding:25px;
 
-}
-
-label{
-
-    display:block;
-
-    margin-top:20px;
-
-    margin-bottom:8px;
-
-    font-weight:600;
-
-}
-
-input,textarea{
-
-    width:100%;
-
-    padding:12px;
-
-    border-radius:12px;
-
-    border:1px solid #CCC;
-
-    font-size:16px;
-
-}
-
-textarea{
-
-    resize:none;
-
-    height:90px;
-
-}
+/* Cantidad */
 
 .cantidad{
 
@@ -128,6 +138,8 @@ textarea{
     gap:20px;
 
 }
+
+
 
 .cantidad button{
 
@@ -149,19 +161,80 @@ textarea{
 
 }
 
+
+
 .cantidad button:hover{
 
     transform:scale(1.1);
 
 }
 
-#cantidad{
+
+
+.cantidad span{
 
     font-size:28px;
 
     font-weight:bold;
 
+    min-width:35px;
+
 }
+
+
+
+/* Formulario */
+
+.form{
+
+    padding:25px;
+
+}
+
+
+
+label{
+
+    display:block;
+
+    margin-top:20px;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    border:1px solid #CCC;
+
+    font-size:16px;
+
+}
+
+
+
+textarea{
+
+    resize:none;
+
+    height:90px;
+
+}
+
+
+
+/* Total */
 
 .total{
 
@@ -175,6 +248,8 @@ textarea{
 
 }
 
+
+
 #total{
 
     display:block;
@@ -184,6 +259,10 @@ textarea{
     font-size:36px;
 
 }
+
+
+
+/* WhatsApp */
 
 .whatsapp{
 
@@ -209,11 +288,17 @@ textarea{
 
 }
 
+
+
 .whatsapp:hover{
 
     transform:scale(1.03);
 
 }
+
+
+
+/* Footer */
 
 footer{
 
@@ -224,28 +309,3 @@ footer{
     color:#666;
 
 }
-
-.opciones{
-
-    padding:10px 25px;
-
-}
-
-
-.opciones label{
-
-    margin-top:12px;
-
-    font-weight:500;
-
-}
-
-
-.opciones input{
-
-    width:auto;
-
-    margin-right:8px;
-
-}
-
